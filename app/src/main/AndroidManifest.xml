@@ -3,6 +3,7 @@
     package="lee.com.certificatetest">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestClassActivity"></activity>
+        <activity android:name=".TestClassActivity" />
+        <activity android:name=".ExamActivity"></activity>
     </application>
 
 </manifest>

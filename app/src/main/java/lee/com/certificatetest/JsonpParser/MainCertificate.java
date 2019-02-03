@@ -28,7 +28,6 @@ public abstract class MainCertificate extends AsyncTask<Void,Void,ArrayList<Stri
             e.printStackTrace();
             ConnectError(e);
         }
-
         Elements newsHeadlines = doc.select("select[name=imsidbname]");
 
 
@@ -41,8 +40,6 @@ public abstract class MainCertificate extends AsyncTask<Void,Void,ArrayList<Stri
                 miantitle.add(e1.val());
             }
         }
-
-        miantitle.remove(0);
 
         return miantitle;
     }
@@ -59,7 +56,7 @@ public abstract class MainCertificate extends AsyncTask<Void,Void,ArrayList<Stri
 
     }
 
-    abstract void MainTitleCertificateSuccess(ArrayList<String> title);
-    abstract void MainTitleCertificateError();
-    abstract void ConnectError(IOException e);
+    protected abstract void MainTitleCertificateSuccess(ArrayList<String> title);
+    protected abstract void MainTitleCertificateError();
+    protected abstract void ConnectError(IOException e);
 }
